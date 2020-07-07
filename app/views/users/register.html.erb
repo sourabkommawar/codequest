@@ -1,0 +1,32 @@
+<div class="all">
+
+	<div class="container" id="register">
+		<h1>Register for Event</h1>
+		<div class="row">
+			<div class="col-md-2">
+				<%= form_with(model: @user , local: true) do |f| %>
+				<%= render 'shared/error_messages' %>
+
+				<%= f.label :name %>
+				<%= f.text_field :name %>
+
+				<%= f.label :email %>
+				<%= f.text_field :email %>
+
+				<%= f.label :phone_number %>
+				<%= f.telephone_field :phone_number %>
+
+				<%= f.label :password %>
+				<%= f.password_field :password %>
+
+				<%= f.label :password_confirmation %>
+				<%= f.password_field :password_confirmation %>
+
+				<%= f.submit "Register" , class: "btn btn-primary" %>
+				<p>Already Have an Account? <%= link_to "Login" , login_path%></p>
+				<% end %>
+			</div>
+		</div>
+	</div>
+
+</div>

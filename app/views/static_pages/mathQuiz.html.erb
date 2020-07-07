@@ -1,0 +1,9 @@
+<div class="container">
+  <button type="button" name="button"><%=link_to 'back' , 'home'%></button>
+</div>
+<% if logged_in? %>
+	<%= javascript_pack_tag 'mathQuiz' %>
+<% else %>
+  	please <%= link_to 'login' ,login_path%>
+<% end %>
+
